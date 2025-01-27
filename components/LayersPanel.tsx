@@ -3,7 +3,7 @@ import type { Node, Edge } from "reactflow"
 
 interface LayersPanelProps {
   nodes: Node[]
-  setNodes: (nodes: Node[]) => void
+  setNodes: (nodes: Node[] | ((prevNodes: Node[]) => Node[])) => void // Updated type definition
   takeSnapshot: (nodes: Node[], edges: Edge[]) => void
   edges: Edge[]
 }
@@ -12,7 +12,7 @@ export default function LayersPanel({ nodes, setNodes, takeSnapshot, edges }: La
   const [isOpen, setIsOpen] = useState(false)
 
   const moveNode = (id: string, direction: "up" | "down") => {
-    setNodes((prevNodes) => {
+    setNodes((prevNodes: Node[]) => { // Explicitly type `prevNodes` as `Node[]`
       const index = prevNodes.findIndex((node) => node.id === id)
       if (index === -1) return prevNodes
 
@@ -57,4 +57,3 @@ export default function LayersPanel({ nodes, setNodes, takeSnapshot, edges }: La
     </div>
   )
 }
-
