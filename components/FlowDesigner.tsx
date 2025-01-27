@@ -14,6 +14,7 @@ import ReactFlow, {
   ReactFlowProvider,
   Panel,
   ConnectionMode,
+  BackgroundVariant, // Import BackgroundVariant
 } from "reactflow"
 import "reactflow/dist/style.css"
 
@@ -178,7 +179,7 @@ function Flow() {
           >
             <Controls />
             <MiniMap />
-            {showGrid && <Background variant="dots" gap={12} size={1} color="#aaa" />}
+            {showGrid && <Background variant={BackgroundVariant.Dots} gap={12} size={1} color="#aaa" />}
             <Panel position="bottom-center">{isConnecting ? "Connection mode: ON" : "Connection mode: OFF"}</Panel>
             <Panel position="bottom-right">
               <button
@@ -227,4 +228,3 @@ export default function FlowDesigner() {
     </ReactFlowProvider>
   )
 }
-
