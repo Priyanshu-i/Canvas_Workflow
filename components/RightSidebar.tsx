@@ -22,14 +22,7 @@ export default function RightSidebar({
 }: RightSidebarProps) {
   const handleColorChange = (color: string) => {
     if (selectedNode) {
-      // Update the node immutably
-      setNodes((prevNodes) =>
-        prevNodes.map((node) =>
-          node.id === selectedNode.id
-            ? { ...node, data: { ...node.data, color } }
-            : node
-        )
-      );
+      updateNodeData(selectedNode.id, { color });
     }
   };
 
