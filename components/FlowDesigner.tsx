@@ -13,6 +13,7 @@ import ReactFlow, {
   useReactFlow,
   ReactFlowProvider,
   Panel,
+  ConnectionMode,
 } from "reactflow"
 import "reactflow/dist/style.css"
 
@@ -173,11 +174,11 @@ function Flow() {
             nodeTypes={nodeTypes}
             fitView
             deleteKeyCode="Delete"
-            connectionMode={isConnecting ? "loose" : "strict"}
+            connectionMode={isConnecting ? ConnectionMode.Loose : ConnectionMode.Strict}
           >
             <Controls />
             <MiniMap />
-            {showGrid && <Background variant="dots" gap={12} size={1} />}
+            {showGrid && <Background variant="dots" gap={12} size={1} color="#aaa" />}
             <Panel position="bottom-center">{isConnecting ? "Connection mode: ON" : "Connection mode: OFF"}</Panel>
             <Panel position="bottom-right">
               <button
