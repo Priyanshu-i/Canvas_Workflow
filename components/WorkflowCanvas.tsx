@@ -1,4 +1,4 @@
-"use client"
+/*"use client"
 
 import type React from "react"
 import { useState, useCallback, useRef } from "react"
@@ -152,3 +152,4 @@ const WorkflowCanvas = () => {
 
 export default WorkflowCanvas
 
+*/

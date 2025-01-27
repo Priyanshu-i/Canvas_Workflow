@@ -1,4 +1,5 @@
-export const saveWorkflow = (flow: any) => {
+
+/*export const saveWorkflow = (flow: any) => {
     localStorage.setItem("workflow", JSON.stringify(flow))
   }
   
@@ -7,4 +8,4 @@ export const saveWorkflow = (flow: any) => {
     return savedFlow ? JSON.parse(savedFlow) : null
   }
   
-  
+*/  
