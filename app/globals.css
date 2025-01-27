@@ -2,6 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#__next {
+  height: 100%;
+}
+
+.react-flow__node-rectangle,
+.react-flow__node-circle,
+.react-flow__node-text,
+.react-flow__node-image {
+  padding: 0;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  color: #222;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 12px;
+}
+
+.react-flow__node-rectangle {
+  border-color: #1a192b;
+}
+
+.react-flow__node-circle {
+  border-color: #1a192b;
+}
+
+.react-flow__node-text {
+  border-color: #1a192b;
+}
+
+.react-flow__node-image {
+  border-color: #1a192b;
+}
+
+.react-flow__node {
+  width: 150px;
+  height: 40px;
+}
+
+.react-flow__node-circle {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.react-flow__node-text,
+.react-flow__node-image {
+  width: auto;
+  height: auto;
+}
+
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #784be8;
+}
+
+.react-flow__handle-top {
+  top: -4px;
+}
+
+.react-flow__handle-bottom {
+  bottom: -4px;
+}
+
+.react-flow__node-selected {
+  box-shadow: 0 0 0 2px #784be8;
+}
+
+button {
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .react-flow__node {
+    width: 100px;
+    height: 30px;
+  }
+
+  .react-flow__node-circle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.react-flow__panel {
+  z-index: 5;
+}
+
+.react-flow__minimap {
+  bottom: 20px;
+  right: 20px;
+}
+
+.react-flow__controls {
+  bottom: 20px;
+  left: 20px;
+}
+
+
+/*
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,3 +138,4 @@ body {
 
   font-family: Arial, Helvetica, sans-serif;
 }
+*/
